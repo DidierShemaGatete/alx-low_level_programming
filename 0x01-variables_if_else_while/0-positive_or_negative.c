@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  * Discription: 'Chech for number if it is positive or negative'
- * Return: Always 0 
+ * Return: Always 0
  */
 int main(void)
 {
