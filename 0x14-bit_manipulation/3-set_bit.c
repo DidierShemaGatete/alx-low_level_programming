@@ -31,7 +31,7 @@ int main(void)
 
 	n = 1024;
 	set_bit(&n, 5);
-	printf("%lu\n, n");
+	printf("%lu\n", n);
 
 	n = 98;
 	set_bit(&n, 0);
