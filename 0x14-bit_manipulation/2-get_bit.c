@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stddef.h>
 #include "main.h"
 /**
  * get_bit - retrun the value of a bit at a given index
