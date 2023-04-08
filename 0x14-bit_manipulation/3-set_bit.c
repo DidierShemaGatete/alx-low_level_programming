@@ -1,7 +1,6 @@
 #include "main.h"
-
 /**
- * set_bet - sets the value of a bit to 1 at a given index
+ * set_bet - sets the value of a bit at a given index to 1
  * @n: pointer to the number to modify
  * @index: index of the bit to set (starting from 0)
  *
