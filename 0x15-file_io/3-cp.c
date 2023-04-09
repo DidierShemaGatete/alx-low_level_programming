@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.>
+#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprint(STDERR_FILENO, " %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, " %s file_from file_to\n", argv[0]);
 		return (97);
 	}
 
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 
 	if (fd_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't write to %s\n", ardv[2]);
+		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 		return (99);
 	}
 
@@ -45,20 +45,20 @@ int main(int argc, char **argv)
 	{
 		if (write(fd_to, buf, nread) != nread)
 		{
-			dprintf(STDERR_FILENO, "Error: can't write to %s\n", arg[2]);
+			dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 			return (99);
 		}
 	}
 
 	if (nread == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", fd_from);
+		dprintf(STDERR_FILENO, "Error: can't read from file %d\n", fd_from);
 		return (98);
 	}
 
 	if (close(fd_from) == -1)
 	{
-		drpintf(STDERR_FILENO, "Error: can't close fd %d\n", fd_from);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd_from);
 		return (100);
 	}
 
